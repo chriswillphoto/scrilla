@@ -1,0 +1,20 @@
+.totals h5 {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+hr {
+  width: 60%;
+  margin: 0 auto 20px;
+}
+
+.totals button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #2094E0;
+}

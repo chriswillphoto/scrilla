@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700');
+
+.splash {
+  width: 100%;
+  background-color: slategrey;
+  display: inline-block;
+  background: url("https://source.unsplash.com/fJTqyZMOh18");
+  background-attachment: fixed;
+  height: 80vh;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+.splash-words {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.splash-words h1 {
+  font-size: 80px;
+  font-family: "Dancing Script", serif;
+  font-weight: 700;
+}
+
+.splash-words h2 {
+  font-size: 18px;
+}

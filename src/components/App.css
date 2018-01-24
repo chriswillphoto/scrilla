@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400');
+
+* {
+  font-family: "Heebo", sans-serif;
+}
+.App {
+  text-align: center;
+}
+
+.viewer {
+  width: 80%;
+  margin: 0 auto;
+  display: inline-block;
+  overflow-y: auto;
+  vertical-align: top;
+}
+
+
+
+.graph {
+  width: 600px;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.graph-button {
+  background-color: transparent;
+  /* border: none; */
+  font-size: 16px;
+  text-decoration: underline;
+  height: 40px;
+  width: 200px;
+  cursor: pointer;
+  margin: 10px 0;
+  color: #2094E0;
+}
+
+.graph-button:focus {
+  outline: none;
+}

@@ -1,0 +1,54 @@
+.adder-container {
+  /* background-color: salmon; */
+  width: 80%;
+  margin: 40px auto;
+  height: 40px;
+  line-height: 40px;
+}
+
+.time-button {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.adder-container h2 {
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.adder-container input {
+  text-align: center;
+  height: 35px;
+  width: 200px;
+  font-size: 24px;
+}
+
+.adder-container * {
+  /* margin: 0 20px; */
+}
+
+.adder-container button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.adder-container a {
+  color: #2094E0;
+}
+
+.formy {
+  display: grid;
+  margin: 0 auto;
+  width: 80%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.formy * {
+  margin: 0 auto;
+}

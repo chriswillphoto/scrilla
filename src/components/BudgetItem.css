@@ -1,0 +1,15 @@
+.budget-item {
+  margin: 20px auto 20px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  border: 1px solid rgba(0,0,30,0.3);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.budget-item * {
+  display: inline-block;
+  margin: 0 20px;
+}

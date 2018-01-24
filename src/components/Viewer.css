@@ -1,0 +1,6 @@
+.viewer {
+  width: 100%;
+  display: inline-block;
+  overflow-y: auto;
+  vertical-align: top;
+}
