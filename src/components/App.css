@@ -18,9 +18,13 @@
 
 
 .graph {
-  width: 600px;
   margin: 0 auto;
   min-height: 400px;
+  text-align: center;
+}
+
+canvas {
+  height: 100%;
 }
 
 .graph-button {

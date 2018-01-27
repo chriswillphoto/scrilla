@@ -37,7 +37,8 @@ class Adder extends Component {
     });
   }
 
-  buttonChange() {
+  buttonChange(e) {
+    e.preventDefault()
     if (this.state.button === 'Monthly') {
       this.setState({ button: 'Fortnightly' });
     } else if (this.state.button === 'Fortnightly') {
@@ -60,14 +61,15 @@ class Adder extends Component {
           placeholder="Name"
         />
 
-        <a
+        <button
           value={this.state.button}
           onClick={(e) => this.buttonChange(e)}
           className="time-button"
           name="recurrence"
+          type="button"
         >
           {this.state.button}
-        </a>
+        </button>
 
         <input
           type="number"

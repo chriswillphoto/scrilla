@@ -19,6 +19,8 @@ class App extends Component {
     super(props);
 
     this.state = {
+      loggedIn: false,
+      splash: true,
       items: [],
       totals: [],
       viewing: [],
@@ -26,7 +28,7 @@ class App extends Component {
       chart: 'Pie',
       chartOptions: {
         legend: { display: false },
-        title: { display: true, text: "Subscriptions + Billables" },
+        title: { display: true, text: 'Subscriptions + Billables' },
       },
       data: {
         datasets: [
@@ -39,6 +41,9 @@ class App extends Component {
       },
     };
   }
+
+  shrinkMenu() {}
+
   addItem(i) {
     this.setState(
       {
@@ -88,12 +93,14 @@ class App extends Component {
         data: {
           datasets: [
             {
-              data: this.state.totals.map((i) => { return i / 2 }),
-              backgroundColor: this.state.data.datasets[0].backgroundColor
-            }
+              data: this.state.totals.map((i) => {
+                return i / 2;
+              }),
+              backgroundColor: this.state.data.datasets[0].backgroundColor,
+            },
           ],
-          labels: this.state.data.labels
-        }
+          labels: this.state.data.labels,
+        },
       });
     } else if (m === 'Weekly') {
       this.setState({
@@ -104,12 +111,14 @@ class App extends Component {
         data: {
           datasets: [
             {
-              data: this.state.totals.map((i) => { return i / 4 }),
-              backgroundColor: this.state.data.datasets[0].backgroundColor
-            }
+              data: this.state.totals.map((i) => {
+                return i / 4;
+              }),
+              backgroundColor: this.state.data.datasets[0].backgroundColor,
+            },
           ],
-          labels: this.state.data.labels
-        }
+          labels: this.state.data.labels,
+        },
       });
     } else {
       this.setState({
@@ -119,11 +128,11 @@ class App extends Component {
           datasets: [
             {
               data: this.totaler(),
-              backgroundColor: this.state.data.datasets[0].backgroundColor
-            }
+              backgroundColor: this.state.data.datasets[0].backgroundColor,
+            },
           ],
-          labels: this.state.data.labels
-        }
+          labels: this.state.data.labels,
+        },
       });
     }
   }
@@ -137,17 +146,21 @@ class App extends Component {
   }
 
   buttonText() {
-    if(this.state.chart === 'Pie'){
-      return "Change to Bar Graph"
-    }else {
-      return "Change to Pie Graph"
+    if (this.state.chart === 'Pie') {
+      return 'Change to Bar Graph';
+    } else {
+      return 'Change to Pie Graph';
     }
   }
 
   render() {
     return (
       <div className="App">
-        <Menu />
+        <Menu
+          loggedIn={this.state.loggedIn}
+          shrinkMenu={() => this.shrinkMenu()}
+          splashActive={this.state.splash}
+        />
         <Adder addItem={(i) => this.addItem(i)} />
         <div className="viewer">
           {this.state.items &&
@@ -163,11 +176,21 @@ class App extends Component {
           />
         )}
         <div className="graph">
-          {this.state.items.length > 0 && this.state.chart === 'Pie' && <Pie data={this.state.data} options={{title: {display: true, text: "Subscriptions + Billables"}}}/>}
+          {this.state.items.length > 0 &&
+            this.state.chart === 'Pie' && (
+              <Pie
+                data={this.state.data}
+                options={{
+                  title: { display: true, text: 'Subscriptions + Billables' },
+                }}
+                width="600"
+              />
+            )}
           {this.state.chart === 'Bar' && (
             <Bar
               data={this.state.data}
               options={this.state.chartOptions}
+              width="600"
             />
           )}
 

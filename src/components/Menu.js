@@ -1,15 +1,20 @@
-import React, { PureComponent as Component } from 'react';
-import './Menu.css'
+import React from 'react';
+import './Menu.css';
 
-export default class Menu extends Component {
-  render() {
-    return (
-      <div className="splash">
-        <div className='splash-words'>
-          <h1 id="title">Scrilla</h1>
-          <h2>Visualise where your money goes</h2>
-        </div>
+const Menu = (props) => {
+  return (
+    <div className={"splash " + (props.splashActive ? "" : "shrink")}>
+      <div className={"splash-words " + (props.splashActive ? "" : "hide")}>
+        <h1 id="title">Scrilla</h1>
+        <h2>Visualise where your money goes</h2>
+        <button onClick={props.shrinkMenu}>Let's Go</button>
       </div>
-    );
-  }
-}
+      <div className="linkage">
+        {props.loggedIn && <a href="">Logout</a>}
+        <h5>Signup</h5>
+      </div>
+    </div>
+  );
+};
+
+export default Menu;
