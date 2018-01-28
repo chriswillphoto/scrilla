@@ -10,7 +10,7 @@
   background-size: cover;
   color: white;
   position: relative;
-  transition: background-position 0.5s;
+  transition: background-position 0.8s;
 }
 .splash-words {
   position: absolute;
@@ -47,7 +47,14 @@
 .linkage {
   position: absolute;
   bottom: 0;
-  right: 50px;
+  right: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.linkage a {
+  margin: 0 10px;
+  color: white;
 }
 
 .shrink {

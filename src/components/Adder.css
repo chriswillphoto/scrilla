@@ -2,7 +2,7 @@
   /* background-color: salmon; */
   width: 80%;
   margin: 40px auto;
-  height: 40px;
+  /* height: 40px; */
   line-height: 40px;
 }
 
@@ -18,6 +18,19 @@
   text-decoration: underline;
 }
 
+.instructions {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.instructions h6 {
+  display: inline-block;
+  text-decoration: underline;
+}
+
 .adder-container input {
   text-align: center;
   height: 35px;
@@ -25,20 +38,14 @@
   font-size: 24px;
 }
 
-.adder-container * {
-  /* margin: 0 20px; */
-}
-
 .adder-container button {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 35px;
   background-color: transparent;
-  border: none;
+  border: 1px solid grey;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-.adder-container a {
-  color: #2094E0;
+  color: #2094e0;
 }
 
 .formy {

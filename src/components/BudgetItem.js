@@ -8,7 +8,6 @@ const BudgetItem = (props) => {
   return(
     <div className="budget-item">
       <h2 className="budget-item-name">{props.item.name}</h2>
-      {/* <span>-</span> */}
       <h2 className="budget-item-recurrence">{props.item.recurrence}</h2>
       <h3>${props.item.amount}</h3>
     </div>

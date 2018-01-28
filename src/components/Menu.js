@@ -10,8 +10,10 @@ const Menu = (props) => {
         <button onClick={props.shrinkMenu}>Let's Go</button>
       </div>
       <div className="linkage">
+        {props.loggedIn && <a href="">My Profile</a>}
         {props.loggedIn && <a href="">Logout</a>}
-        <h5>Signup</h5>
+        {!props.loggedIn && <a href="/#/signup">Signup</a>}
+        {!props.loggedIn && <a href="/#/login">SignIn</a>}
       </div>
     </div>
   );

@@ -21,10 +21,11 @@
   margin: 0 auto;
   min-height: 400px;
   text-align: center;
+  width: 600px;
 }
 
 canvas {
-  height: 100%;
+  /* width: 400px; */
 }
 
 .graph-button {

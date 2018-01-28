@@ -52,6 +52,12 @@ class Adder extends Component {
     return (
       <div className="adder-container">
         <h2>Add to your Bùdgét</h2>
+        <div className="instructions">
+          <h6>The Thing You're Paying</h6>
+          <h6>How Often You're Pay For It</h6>
+          <h6>How Much You're Paying For It</h6>
+
+        </div>
         <form onSubmit={(e) => this._addToList(e)} className='formy'>
         <input
           type="text"
