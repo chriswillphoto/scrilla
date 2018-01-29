@@ -51,7 +51,7 @@ class Adder extends Component {
   render() {
     return (
       <div className="adder-container">
-        <h2>Add to your Bùdgét</h2>
+        <h2>Add to your Budget</h2>
         <div className="instructions">
           <h6>The Thing You're Paying</h6>
           <h6>How Often You're Pay For It</h6>

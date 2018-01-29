@@ -41,7 +41,7 @@
 }
 
 .splash-words button:focus {
-  outline: none;
+  outline: green 3px solid;
 }
 
 .linkage {

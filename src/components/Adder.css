@@ -48,6 +48,10 @@
   color: #2094e0;
 }
 
+.adder-container button:focus {
+  outline: 2px dashed green;
+}
+
 .formy {
   display: grid;
   margin: 0 auto;

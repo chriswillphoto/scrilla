@@ -179,6 +179,17 @@ class App extends Component {
           />
         )}
         <div className="graph">
+          {this.state.items.length > 0 && (
+            <button
+              className="graph-button"
+              title="Switch to a bar graph"
+              onClick={() => {
+                this.chartSelect();
+              }}
+            >
+              {this.buttonText()}
+            </button>
+          )}
           {this.state.items.length > 0 &&
             this.state.chart === 'Pie' && (
               <Pie
@@ -193,17 +204,7 @@ class App extends Component {
             <Bar data={this.state.data} options={this.state.chartOptions}/>
           )}
 
-          {this.state.items.length > 0 && (
-            <button
-              className="graph-button"
-              title="Switch to a bar graph"
-              onClick={() => {
-                this.chartSelect();
-              }}
-            >
-              {this.buttonText()}
-            </button>
-          )}
+
         </div>
       </div>
     );
