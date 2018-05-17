@@ -29,7 +29,7 @@ class App extends Component {
       chartOptions: {
         legend: { display: false },
         title: { display: true, text: 'Subscriptions + Billables' },
-        maintainAspectRatio: false,
+        // maintainAspectRatio: false,
       },
       data: {
         datasets: [
@@ -196,7 +196,6 @@ class App extends Component {
                 data={this.state.data}
                 options={{
                   title: { display: true, text: 'Subscriptions + Billables' },
-                  maintainAspectRatio: false,
                 }}
               />
             )}

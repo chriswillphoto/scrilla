@@ -19,13 +19,15 @@
 
 .graph {
   margin: 0 auto;
-  min-height: 400px;
+  /* min-height: 400px; */
   text-align: center;
-  width: 600px;
+  width: 100%;
 }
 
 canvas {
-  /* width: 400px; */
+  /* width: 100%!important;
+  margin: 0 auto;
+  max-width: 640px; */
 }
 
 .graph-button {

@@ -13,6 +13,20 @@
   cursor: pointer;
 }
 
+.formy {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.formy div {
+  width: calc(100% / 3);
+  padding: 0 8px; 
+}
+
+.formy div > button { vertical-align: top; }
+
 .adder-container h2 {
   margin-bottom: 15px;
   text-decoration: underline;
@@ -34,7 +48,7 @@
 .adder-container input {
   text-align: center;
   height: 35px;
-  width: 200px;
+  width: 100%;
   font-size: 24px;
 }
 
@@ -52,14 +66,8 @@
   outline: 2px dashed green;
 }
 
-.formy {
-  display: grid;
-  margin: 0 auto;
-  width: 80%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-}
+@media screen and (max-width: 768px){
 
-.formy * {
-  margin: 0 auto;
+  .formy div { width: 100%; }
+
 }
