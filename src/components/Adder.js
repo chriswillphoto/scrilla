@@ -67,7 +67,7 @@ class Adder extends Component {
           />
         </div>
         <div>
-          <h6>How Often You're Pay For It</h6>
+          <h6>How Often You Pay For It</h6>
           <button
             value={this.state.button}
             onClick={(e) => this.buttonChange(e)}
